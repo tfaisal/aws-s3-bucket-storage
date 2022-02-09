@@ -1,9 +1,8 @@
 package com.awss3cloud.s3.service;
 
 import com.amazonaws.services.s3.AmazonS3;
-import com.amazonaws.services.s3.model.PutObjectRequest;
-import com.amazonaws.services.s3.model.S3Object;
-import com.amazonaws.services.s3.model.S3ObjectInputStream;
+import com.amazonaws.services.s3.AmazonS3Client;
+import com.amazonaws.services.s3.model.*;
 import com.amazonaws.util.IOUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
+import java.util.UUID;
 
 @Service
 @Slf4j
@@ -67,14 +68,14 @@ public class StorageService {
     }
 
     public String createBucket(String bucketName) {
-        BucketName = "my-first-bucket" + UUID.randomUUID();
+        bucketName = "my-first-bucket" + UUID.randomUUID();
 
         if(!s3Client.doesBucketExist(bucketName))
         {
-            s3Client.createBucket(new CreateBucketRequest(BucketName));
+            s3Client.createBucket(new CreateBucketRequest(bucketName));
             return "Bucket Created \n Bucket Name:-" + bucketName + "\nregion:-"
-                    + s3Client.getBucketLocation(new GetBucketLocationRequest(BucketName));
-            log.info(BucketName+ "Successfully Created");
+                    + s3Client.getBucketLocation(new GetBucketLocationRequest(bucketName));
+            log.info(bucketName+ "Successfully Created");
         }
         return " Bucket already exist";
     }
