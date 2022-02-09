@@ -1,4 +1,4 @@
-package com.javatechie.s3;
+package com.awss3cloud.s3.s3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class FileStorageServiceApplication {
 
-	public static void main(String[] args) {
+	public static void main(String[] args)
+	{
 		SpringApplication.run(FileStorageServiceApplication.class, args);
 	}
 

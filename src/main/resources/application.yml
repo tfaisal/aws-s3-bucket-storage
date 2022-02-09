@@ -1,8 +1,8 @@
 cloud:
   aws:
     credentials:
-      access-key: 
-      secret-key: 
+      access-key: "xxx-xxx-xxxx"
+      secret-key: "xxx-xxx-xxxx"
     region:
       static: us-east-2
     stack:
@@ -10,7 +10,7 @@ cloud:
 
 application:
   bucket:
-    name: javatechiestorage
+    name: amazons3storage
 
 
 spring:
@@ -22,5 +22,5 @@ spring:
       max-request-size: 10MB
 
 server:
-  port: 9090
+  port: 9091
 

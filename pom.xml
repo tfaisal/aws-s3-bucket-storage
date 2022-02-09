@@ -8,10 +8,10 @@
 		<version>2.3.7.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javatechie</groupId>
-	<artifactId>file-storage-service</artifactId>
+	<groupId>com.awss3cloud</groupId>
+	<artifactId>aws-s3-bucket-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>file-storage-service</name>
+	<name>aws-s3-bucket-project</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
